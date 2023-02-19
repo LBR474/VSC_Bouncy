@@ -1,0 +1,69 @@
+<div class="wpdiv" #wpdiv (mouseover)="split_text_func(); toggle()">
+  <div class="down_arrow_div">
+    Scroll down<br />
+    &#8595;
+  </div>
+
+  <div class="bbox" #bbox>
+    <div class="horizontal">
+      <div *ngFor="let item of myArray" class="item">{{ item }}</div>
+    </div>
+  </div>
+
+  <div class="abox" #abox>
+    <div id="ngt-canvas-container">
+      <!-- [camera]="{ position: [0.0, 2.7,  7 ], fov: 75 }"> -->
+
+      <ngt-canvas id="canvas_1"
+      [camera]="{ position: [0.0, 2.7,  7 ], fov: 75}"
+      
+      
+      
+      >
+        <!-- [orthographic]="true" -->
+
+        <!-- <ngt-orthographic-camera 
+          [left]="10"
+          [right]="10"
+          [top]="10"
+          [bottom]="10"
+          [near]="0.011"
+          [far]="1000"
+          
+          
+          ></ngt-orthographic-camera> -->
+        <!-- <ngt-color attach="background" color="yellow"></ngt-color> -->
+        <ngt-ambient-light intensity="0.3"></ngt-ambient-light>
+        <ngt-spot-light
+          [position]="10"
+          angle="0.15"
+          penumbra="1"
+        ></ngt-spot-light>
+        <ngt-point-light [position]="10"></ngt-point-light>
+
+        <!-- orthographic camera settings -->
+        <!-- [position]="[0.0, -260.0, -590.0]" 
+              [scale]="[80, 80, 80]"
+              [rotation]="[0.1, -1.7, 0.0]" -->
+        <ng-container>
+          <ngt-primitive
+            #primitiveModel
+            *ngIf="this.model$ | async as model"
+            (ready)="this.modelReadyService($event)"
+            [object]="model.scene"
+            [position]="[0.0, 0.0, 0.0]"
+            [scale]="[1.0, 1.0, 1.0]"
+            [rotation]="[0.1, -1.7, 0.0]"
+          >
+          </ngt-primitive>
+        </ng-container>
+
+
+        <ngt-soba-orbit-controls
+        [target]="[0, 2.7, 0]"
+        [enableZoom]="isOpen"
+        ></ngt-soba-orbit-controls>
+      </ngt-canvas>
+    </div>
+  </div>
+</div>

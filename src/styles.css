@@ -1,0 +1,139 @@
+html, body {
+height: 100%;
+width:100%; 
+background-color: rgb(0, 255, 85);
+margin: 0 !important;
+}
+
+.abox {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+border: 3px black dotted;
+  width: 30vw;
+  height: 70vh;
+  z-index: 1;
+}
+
+
+
+
+
+.bbox {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  /* border: 1px solid #dddddd; */
+  width: 20vw;
+  height: 40vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  z-index: 2;
+}
+
+.cbox {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin: auto;
+
+  border-radius: 2px;
+  background-color: rgb(251, 0, 255);
+  width: fit-content;
+  height: fit-content;
+  z-index: 3;
+  font-family: r;
+}
+
+.down_arrow_div {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  font-size: xx-large;
+  text-align: center;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  width:180px;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  border: 1px solid black; 
+  text-align: center;
+  padding: 2px;
+  font-size: 72px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.horizontal {
+  display: flex;
+
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  align-content: center;
+}
+
+
+.item {
+  position: relative;
+  top: 400px;
+  /* border: 1px solid #dddddd; */
+  /* padding-left: 1.5px; */
+  width: fit-content;
+  height: fit-content;
+  font-size: 72px;
+  font-weight: 400;
+  
+  
+  /* justify-content: center; */
+  
+  opacity: 0;
+}
+
+#ngt-canvas-container {
+  height: 100%;
+  width: 100%;
+  left: 10px;
+}
+
+.open-close-container {
+  left: 100px;
+  border: 1px solid #dddddd;
+  margin-top: 1em;
+  padding: 20px 20px 0px 20px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  width: 50vw;
+}
+
+p {
+  display: inline-block;
+  flex-grow: 1;
+  height: 100px;
+  width: calc(100% * (1 / 4) - 10px - 1px);
+}
+
+#wayout {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  width: 10%;
+  background-color: rgb(238, 0, 255);
+}
+
+.wpdiv {
+  height: 200vh;
+  width: 100vw;
+  /* overflow-x: scroll; */
+  background-color: rgb(255, 251, 0);
+}
