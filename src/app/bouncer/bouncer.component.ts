@@ -214,7 +214,7 @@ export class BouncerComponent implements AfterViewInit {
           })
           this.tl.resume()
         }
-       
+       localStorage
       }
     } else {
       this.scrollingDown = true;
