@@ -60,7 +60,7 @@ export class BouncerComponent implements AfterViewInit {
   //
   // // // global variables area
 
-  isDisabled: boolean = false;
+  isDisabled: boolean = true;
 
   //isDivIn: boolean = false;
 
@@ -146,10 +146,72 @@ export class BouncerComponent implements AfterViewInit {
     this.isDisabled = true;
   }
 
-  go_further() {
-    this.tl_2.to('#abox', {
-      x: 1000,
-    });
+  rotate_can() {
+    if (
+      this.whole_thing &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] > 100 &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] < 200
+    ) {
+      gsap.to(this.whole_thing.quaternion, {
+        _w: 0.9808047,
+        _x: 0.0,
+        _y: -0.19499269,
+        _z: 0.0,
+      });
+    }
+    // next else if section
+    else if (
+      this.whole_thing &&
+      this.plunger &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] > 400 &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] < 600
+    ) {
+      gsap.to(this.plunger.position, {
+        y: 0.59,
+      });
+      gsap.to(this.whole_thing.quaternion, {
+        _w: 0.92284388,
+        _x: 0.01875885,
+        _y: -0.38203923,
+        _z: -0.04531339,
+      });
+    }
+    // next else if section
+    else if (
+      this.whole_thing &&
+      this.plunger &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] > 800 &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] < 1000
+    ) {
+      gsap.to(this.plunger.position, {
+        y: 0.57,
+      });
+      gsap.to(this.whole_thing.quaternion, {
+        _w: 0.69380974,
+        _x: 0.10841282,
+        _y: -0.69325746,
+        _z: -0.16207656,
+      });
+    }
+    // next else if section
+    else if (
+      this.whole_thing &&
+      this.plunger &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] > 1000
+      // &&
+      // this.scrollPositionArray[this.scrollPositionArray.length - 1] < 1100
+    ) {
+      console.log(this.plunger.position);
+      gsap.to(this.plunger.position, {
+        y: 0.5,
+      });
+      gsap.to(this.whole_thing.quaternion, {
+        _w: 0.60906331,
+        _x: 0.0979285,
+        _y: -0.7529978,
+        _z: -0.22901137,
+      });
+    }
   }
 
   // viewport scroll area begins
@@ -165,7 +227,7 @@ export class BouncerComponent implements AfterViewInit {
 
   @ViewChild('wpdiv') wpdiv!: ElementRef;
 
-  @ViewChild('ngtcc') ngtcc!: ElementRef
+  @ViewChild('ngtcc') ngtcc!: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
   public viewportScroll() {
@@ -193,16 +255,13 @@ export class BouncerComponent implements AfterViewInit {
     ) {
       this.scrollingUp = true;
       this.scrollingDown = false;
-
+      this.rotate_can();
       //this.movementVars.OC_move_left = window.scrollY * 100 + 'px';
 
       if (boundingRectabox.x > 100) {
         this.switch_off_zoom();
       }
-      if (
-        window.scrollY <
-        boundingRectwpdiv.width - boundingRectngtcc.width
-      ) {
+      if (window.scrollY < boundingRectwpdiv.width - boundingRectngtcc.width) {
         gsap.to('.abox', {
           x: window.scrollY,
           duration: 0.1,
@@ -210,31 +269,30 @@ export class BouncerComponent implements AfterViewInit {
         if (boundingRectabox.x < boundingRectngtcc.width) {
           gsap.to('.cbox', {
             opacity: 0,
-            duration: 0.1
-          })
-          this.tl.resume()
+            duration: 0.1,
+          });
+          this.tl.resume();
         }
-       localStorage
+        localStorage;
       }
     } else {
       this.scrollingDown = true;
       this.scrollingUp = false;
-
+      this.rotate_can();
       if (boundingRectabox.x > 100) {
         this.switch_off_zoom();
       }
 
-      
-
       if (
         window.scrollY <
-        //boundingRectwpdiv.width - boundingRectabox.width * 1.5
-        boundingRectwpdiv.width / 2
-        
+          //boundingRectwpdiv.width - boundingRectabox.width * 1.5
+          boundingRectwpdiv.width / 2 &&
+        this.whole_thing
       ) {
         gsap.to('.abox', {
           x: window.scrollY,
         });
+
         gsap.to('.bbox', {
           y: window.scrollY,
           opacity: 0,
@@ -245,16 +303,16 @@ export class BouncerComponent implements AfterViewInit {
           opacity: 0,
           duration: 3,
         });
-        if ( boundingRectabox.x > boundingRectcbox.width) {
-        gsap.to('.cbox', {
-          // width: boundingRectabox.x,
-          opacity: 1,
-          duration: 0.1,
-        });
-      }
+        if (boundingRectabox.x > boundingRectcbox.width) {
+          gsap.to('.cbox', {
+            // width: boundingRectabox.x,
+            opacity: 1,
+            duration: 0.1,
+          });
+        }
         // console.log(boundingRectbbox);
       } else if (boundingRectbbox.y > 750) {
-        console.log(boundingRectbbox);
+        //console.log(boundingRectbbox);
         gsap.to('.abox', {
           x: boundingRectwpdiv.width - boundingRectngtcc.width,
         });

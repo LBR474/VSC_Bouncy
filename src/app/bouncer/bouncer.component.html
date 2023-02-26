@@ -5,7 +5,7 @@
   </div>
 
   <div class="cbox" #cbox id="cbox">
-    <h1>Here is the <br>c div containing some<br> text that will appear</h1>
+    <h1>This radiance-boosting leave-on mask clarifies uneven tone, fades stubborn spots, and reduces the look of redness with 10% azelaic and 1% salicylic acids, revealing a brighter, more even complexion.</h1>
   </div>
   <!-- <div class="dbox" #dbox>Here is the d div</div> -->
 
@@ -36,14 +36,14 @@
             *ngIf="this.model$ | async as model"
             (ready)="this.modelReadyService($event)"
             [object]="model.scene"
-            [position]="[0.0, 0.0, 0.0]"
+            [position]="[0.0, -0.5, 0.0]"
             [scale]="[1.0, 1.0, 1.0]"
           >
           </ngt-primitive>
         </ng-container>
         <!-- (ready)="this.switch_off_zoom()" -->
         <ngt-soba-orbit-controls
-          [target]="[0.0, 2.7, 0]"
+          [target]="[0.0, 0.7, 0]"
           [enableZoom]="!isDisabled"
           [enabled]="!isDisabled"
         ></ngt-soba-orbit-controls>

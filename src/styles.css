@@ -2,7 +2,7 @@ html,
 body {
   height: 300vh;
   width: 100vh;
-  background-color: rgb(0, 255, 85);
+  background-color: rgb(252, 252, 252);
   margin: 0 !important;
 }
 
@@ -15,6 +15,7 @@ body {
   height: 70vh;
   z-index: 1;
   align-content: left;
+  background-color: rgb(255, 251, 0)
 }
 
 .bbox {
@@ -33,13 +34,18 @@ body {
   position: fixed;
   top: 10%;
   /* left: 30%; */
- 
-  border: 3px black dotted;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* border: 3px black dotted; */
+  font-size: xx-large;
+  font-weight: lighter;
+  
   width: 40vw;
   height: 70vh;
-  background-color: #2196f3;
+  /* background-color: #2196f3; */
   opacity: 0;
-  background-color: aqua;
+  /* background-color: aqua; */
+  padding-left: 20px;
   z-index: 0;
 }
 
@@ -112,7 +118,7 @@ body {
   width: 30%;
   /* left: 10px; */
   border: 1px solid #dddddd;
-  background-color: #2196f3;
+  /* background-color: #2196f3; */
 }
 
 .open-close-container {
@@ -144,8 +150,8 @@ p {
 .wpdiv {
   height: 300vh;
   width: 100vw;
-  border: 5px dashed green;
+  /* border: 5px dashed green; */
   /* overflow-x: scroll; */
-  background-color: rgb(255, 251, 0);
+  background-color: rgb(249, 249, 248);
   overflow: auto;
 }
