@@ -303,7 +303,15 @@ export class BouncerComponent implements AfterViewInit {
         if (boundingRectabox.x < boundingRectngtcc.width) {
           gsap.to('.cbox', {
             opacity: 0,
-            duration: 0.1,
+            duration: 1,
+          });
+          gsap.to('.pink-appear-div-large', {
+            opacity: 0,
+            duration: 1,
+          });
+          gsap.to('.pink-appear-div-small', {
+            opacity: 0,
+            duration: 1,
           });
           this.tl.resume();
         }
@@ -332,6 +340,7 @@ export class BouncerComponent implements AfterViewInit {
           opacity: 0,
           duration: 3,
         });
+        
         gsap.to('.down_arrow_div', {
           y: window.scrollY,
           opacity: 0,
@@ -341,8 +350,21 @@ export class BouncerComponent implements AfterViewInit {
           gsap.to('.cbox', {
             // width: boundingRectabox.x,
             opacity: 1,
-            duration: 0.1,
+            duration: 3,
           });
+          
+            gsap.to('.pink-appear-div-large', {
+              // y: '-400px',
+              opacity: 1,
+              duration: 3,
+            });
+
+            gsap.to('.pink-appear-div-small', {
+              // y: '-400px',
+              opacity: 1,
+              duration: 3,
+            });
+         
         }
         // console.log(boundingRectbbox);
       } else if (boundingRectbbox.y > 750) {

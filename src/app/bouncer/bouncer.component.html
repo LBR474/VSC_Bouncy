@@ -1,5 +1,8 @@
 <div class="wpdiv" #wpdiv>
+
+   <!-- the two top full-width dives begin -->
   <div class="de-container-full de-split-aligner de-nav-wrapper">
+    <!-- Navigation hamburger begins -->
     <div>
       <button
         class="de-hamburger de-text-only"
@@ -10,9 +13,12 @@
         <span></span> <span></span> <span></span>
       </button>
     </div>
+    <!-- Drunk elephant TM logo div begins -->
     <div>
       <img src="./assets/DE-TM.png" />
     </div>
+
+    <!-- right hand top search, cart and account mini-icons appear -->
     <div class="de-right-nav">
       <svg
         aria-hidden="true"
@@ -65,30 +71,13 @@
         </svg>
     </div>
   </div>
-
+<!-- Second top strap full-width div begins  -->
   <div class="de-second-container de-split-aligner"><button>The second top div goes here</button>
     <button>Another button in the second top div</button>
   
   </div>
-  <div class="down_arrow_div">
-    Scroll down<br />
-    &#8595;
-  </div>
 
-  <div class="cbox" #cbox id="cbox">
-    <h1>
-      This radiance-boosting leave-on mask clarifies uneven tone, fades stubborn
-      spots, and reduces the look of redness with 10% azelaic and 1% salicylic
-      acids, revealing a brighter, more even complexion.
-    </h1>
-  </div>
-  <!-- <div class="dbox" #dbox>Here is the d div</div> -->
-
-  <div class="bbox" #bbox id="bbox">
-    <div class="horizontal">
-      <div *ngFor="let item of wordArray" class="item">{{ item }}</div>
-    </div>
-  </div>
+  <!--  divs in approximate alphabetical order from here on -->
   <!-- [camera]="{ position: [-0.0, 2.7, 7], fov: 85 }" -->
   <div class="abox" #abox id="abox">
     <div class="ngtcc" #ngtcc id="ngtcc">
@@ -128,9 +117,41 @@
       <!-- </div>  [enableZoom]="isOpen" 
     
     -->
-      <!-- NGT-canvas-div -->
+      
+    </div> <!-- NGT-canvas-div ends -->
+    
+  </div>  <!-- abox div ends-->
+  
+  
+  <div class="bbox" #bbox id="bbox">
+    <div class="horizontal">
+      <div *ngFor="let item of wordArray" class="item">{{ item }}</div>
     </div>
-    <!-- abox -->
   </div>
+
+  <div class="cbox" #cbox id="cbox">
+    <h1>
+      This radiance-boosting leave-on mask clarifies uneven tone, fades stubborn
+      spots, and reduces the look of redness with 10% azelaic and 1% salicylic
+      acids, revealing a brighter, more even complexion.
+    </h1>
+  </div>
+  <!-- <div class="dbox" #dbox>Here is the d div</div> -->
+
+  <div class="down_arrow_div">
+    Scroll down<br />
+    &#8595;
+  </div>
+
+  <!-- pink appear div large  -->
+  <div class="pink-appear-div-large">
+    <img src="./assets/Pink_appear_div_large.png" />
+  </div>
+
+   <!-- pink appear div small  -->
+   <div class="pink-appear-div-small">
+    <img src="./assets/Pink_appear_div_small.png" />
+  </div>
+
   <!-- WPDiv -->
 </div>

@@ -37,16 +37,19 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   /* border: 3px black dotted; */
-  font-size: xx-large;
+  font-size: large;
   font-weight: lighter;
   
   width: 40vw;
-  height: 70vh;
+  height: 50vh;
   /* background-color: #2196f3; */
   opacity: 0;
   /* background-color: aqua; */
-  padding-left: 20px;
+  padding-left: 40px;
   z-index: 0;
+}
+.cbox h1 {
+  vertical-align: baseline;
 }
 
 .dbox {
@@ -74,6 +77,9 @@ body {
   padding-bottom: 1rem;
   background: #6e6e6e;
   color: #fff;
+}
+.de-container-full img {
+  max-height: 50px;
 }
 .de-hamburger {
   cursor: pointer;
@@ -169,24 +175,24 @@ button.de-text-only {
   z-index: 3;
 }
 
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 1px;
   background-color: #2196f3;
   padding: 10px;
-}
+} */
 
-.grid-container > div {
+/* .grid-container > div {
   width: 180px;
-  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* background-color: rgba(255, 255, 255, 0.8); 
   border: 1px solid black;
   text-align: center;
   padding: 2px;
   font-size: 72px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
+} */
 
 .horizontal {
   display: flex;
@@ -198,9 +204,7 @@ button.de-text-only {
   align-content: center;
 }
 
-img {
-  max-height: 50px;
-}
+
 
 .item {
   position: relative;
@@ -241,6 +245,40 @@ p {
   flex-grow: 1;
   height: 100px;
   width: calc(100% * (1 / 4) - 10px - 1px);
+}
+
+.pink-appear-div-large {
+  position: fixed;
+  width: 20vw;
+  height: 20vh;
+  bottom: 200px;
+  left: 3%;
+  font-size: xx-large;
+  text-align: center;
+  z-index: 3;
+  /* border: green 5px dashed; */
+  opacity: 0;
+}
+.pink-appear-div-large img {
+width: 100%;
+height: auto;
+}
+
+.pink-appear-div-small {
+  position: fixed;
+  width: 10vw;
+  height: 10vh;
+  bottom: 300px;
+  left: 30%;
+  font-size: xx-large;
+  text-align: center;
+  z-index: 3;
+  /* border: green 5px dashed; */
+  opacity: 0;
+}
+.pink-appear-div-small img {
+width: 100%;
+height: auto;
 }
 
 #wayout {
