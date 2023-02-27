@@ -8,7 +8,7 @@ body {
 
 .abox {
   position: fixed;
-  top: 10%;
+  /* top: 20%; */
   /* left: 10px; */
   /* border: 3px black dotted; */
   width: 100vw;
@@ -20,7 +20,7 @@ body {
 
 .bbox {
   position: fixed;
-  top: 10%;
+  top: 20%;
   left: 50%;
   /* border: 1px solid #dddddd; */
   width: 20vw;
@@ -61,12 +61,112 @@ body {
   background-color: rgb(251, 0, 255);
 }
 
+[class*=de-container] {
+  width: 100%;
+  height: 5vh;
+  
+}
+.de-container-full {
+  border: 2px dotted pink;
+  padding-left: 5rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: #6e6e6e;
+  color: #fff;
+}
+.de-hamburger {
+  cursor: pointer;
+  width: 16px;
+  height: 10px;
+  position: absolute;
+  top: 20%;
+  padding: 1rem;
+}
+.de-hamburger span:last-of-type {
+  top: 100%;
+}
+
+.de-hamburger span {
+  display: block;
+  border-bottom: 1px solid #fff;
+  border-radius: 10px;
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all .2s ease-in-out;
+}
+.de-icon-search {
+  width: 140px;
+}
+
+.de-nav-wrapper {
+  background: #6e6e6e;
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 95%;
+  max-height: 30px;
+  position: relative;
+  z-index: 100;
+  /* padding-right: 1em; */
+}
+
+.de-right-nav {
+  height: inherit;
+}
+.de-right-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: calc('top-10%') !important;
+}
+/*     background: #f6dcff; */
+
+.de-second-container {
+  border: 2px dotted pink;
+  padding-left: 5rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  
+  color: #fff;
+  background: #f6dcff;
+}
+
+
+.de-split-aligner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+button.de-text-only {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  background: 0 0;
+  padding: 0;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
 .down_arrow_div {
   position: fixed;
   bottom: 50px;
   left: 50%;
   font-size: xx-large;
   text-align: center;
+  z-index: 3;
 }
 
 .grid-container {
@@ -96,6 +196,10 @@ body {
   flex-direction: row;
   gap: 10px;
   align-content: center;
+}
+
+img {
+  max-height: 50px;
 }
 
 .item {
@@ -154,4 +258,5 @@ p {
   /* overflow-x: scroll; */
   background-color: rgb(249, 249, 248);
   overflow: auto;
+  /* padding-right: 1em; */
 }

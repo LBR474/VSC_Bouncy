@@ -1,11 +1,86 @@
 <div class="wpdiv" #wpdiv>
+  <div class="de-container-full de-split-aligner de-nav-wrapper">
+    <div>
+      <button
+        class="de-hamburger de-text-only"
+        aria-label="Open Flyout Navigation"
+        aria-expanded="false"
+        aria-controls="hamburger-menu"
+      >
+        <span></span> <span></span> <span></span>
+      </button>
+    </div>
+    <div>
+      <img src="./assets/DE-TM.png" />
+    </div>
+    <div class="de-right-nav">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        role="presentation"
+        class="de-icon de-icon-search"
+        viewBox="0 0 56 28"
+      >
+        <g
+          class="de-replace-stroke"
+          fill="none"
+          fill-rule="evenodd"
+          stroke="#FFF"
+          stroke-width="1.5"
+          transform="rotate(7 1.325 8)"
+        >
+          <circle cx="7.868" cy="7.214" r="4"></circle>
+          <path stroke-linecap="round" d="M18.024 14.64l-6.173-4.406"></path>
+        </g></svg>
+
+
+        <svg
+        aria-hidden="true"
+        focusable="false"
+        role="presentation"
+        class="de-icon de-icon-cart"
+        viewBox="0 0 56 28"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+          stroke="#FFF"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        >
+          <path d="M1 17h16l-1.993-9H3.011z"></path>
+          <path
+            stroke-linecap="round"
+            d="M6 9V4.713C6 2.009 7.605 1 9.029 1S12 2.102 12 4.713V9"
+          ></path>
+        </g>
+      </svg>
+
+
+      <svg aria-hidden="true" focusable="false" role="presentation" class="de-icon de-icon-account" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 22">
+        <g stroke-width="1.5" transform="translate(1)" stroke="#FFF" fill="none" fill-rule="evenodd">
+        <circle cx="5.449" cy="3.5" r="2.75"></circle>
+        <path d="M0 11.019C.41 9.314 1.95 6.83 5.45 6.83s4.817 2.272 5.658 4.188" stroke-linecap="round"></path>
+        </g>
+        </svg>
+    </div>
+  </div>
+
+  <div class="de-second-container de-split-aligner"><button>The second top div goes here</button>
+    <button>Another button in the second top div</button>
+  
+  </div>
   <div class="down_arrow_div">
     Scroll down<br />
     &#8595;
   </div>
 
   <div class="cbox" #cbox id="cbox">
-    <h1>This radiance-boosting leave-on mask clarifies uneven tone, fades stubborn spots, and reduces the look of redness with 10% azelaic and 1% salicylic acids, revealing a brighter, more even complexion.</h1>
+    <h1>
+      This radiance-boosting leave-on mask clarifies uneven tone, fades stubborn
+      spots, and reduces the look of redness with 10% azelaic and 1% salicylic
+      acids, revealing a brighter, more even complexion.
+    </h1>
   </div>
   <!-- <div class="dbox" #dbox>Here is the d div</div> -->
 
@@ -14,13 +89,15 @@
       <div *ngFor="let item of wordArray" class="item">{{ item }}</div>
     </div>
   </div>
-
+  <!-- [camera]="{ position: [-0.0, 2.7, 7], fov: 85 }" -->
   <div class="abox" #abox id="abox">
     <div class="ngtcc" #ngtcc id="ngtcc">
       <ngt-canvas
         id="canvas_1"
-        [camera]="{ position: [-0.0, 2.7, 7], fov: 85 }"
+        [camera]="{ far: 100, near: 1, position: [0, 0, 15], zoom: 65 }"
+        orthographic
       >
+        <ngt-orthographic-camera></ngt-orthographic-camera>
         <!-- <ngt-color attach="background" color="red"></ngt-color> -->
         <ngt-ambient-light intensity="0.3"></ngt-ambient-light>
         <ngt-spot-light

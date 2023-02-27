@@ -163,53 +163,87 @@ export class BouncerComponent implements AfterViewInit {
     else if (
       this.whole_thing &&
       this.plunger &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] > 200 &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] < 300
+    ) {
+      gsap.to(this.plunger.position, {
+        //y: 0.59,
+      });
+      gsap.to(this.whole_thing.quaternion, {
+        _w: 0.95698367,
+        _x: 0.0,
+        _y: -0.29014179,
+        _z: 0.0,
+      });
+    }
+    // next else if section
+    else if (
+      this.whole_thing &&
+      this.plunger &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] > 300 &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] < 400
+    ) {
+      gsap.to(this.plunger.position, {
+        //y: 0.59,
+      });
+      gsap.to(this.whole_thing.quaternion, {
+        _w: 0.88203855,
+        _x: 0.0,
+        _y: -0.47117725,
+        _z: 0.0,
+      });
+    }
+    // next else if section
+    else if (
+      this.whole_thing &&
+      this.plunger &&
       this.scrollPositionArray[this.scrollPositionArray.length - 1] > 400 &&
       this.scrollPositionArray[this.scrollPositionArray.length - 1] < 600
     ) {
-      gsap.to(this.plunger.position, {
-        y: 0.59,
-      });
+      // gsap.to(this.plunger.position, {
+      //   y: 0.57,
+      // });
       gsap.to(this.whole_thing.quaternion, {
-        _w: 0.92284388,
-        _x: 0.01875885,
-        _y: -0.38203923,
-        _z: -0.04531339,
+        _w: 0.88203855,
+        _x: 0.0,
+        _y: -0.47117725,
+        _z: 0.0,
       });
     }
     // next else if section
     else if (
       this.whole_thing &&
       this.plunger &&
-      this.scrollPositionArray[this.scrollPositionArray.length - 1] > 800 &&
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] > 900 &&
       this.scrollPositionArray[this.scrollPositionArray.length - 1] < 1000
     ) {
       gsap.to(this.plunger.position, {
-        y: 0.57,
+        y: 0.6,
       });
       gsap.to(this.whole_thing.quaternion, {
-        _w: 0.69380974,
-        _x: 0.10841282,
-        _y: -0.69325746,
-        _z: -0.16207656,
+        _w: 0.70653705,
+        _x: -0.03469231,
+        _y: -0.70597464,
+        _z: -0.0346647,
       });
     }
     // next else if section
     else if (
       this.whole_thing &&
       this.plunger &&
-      this.scrollPositionArray[this.scrollPositionArray.length - 1] > 1000
+      this.scrollPositionArray[this.scrollPositionArray.length - 1] > 1100
       // &&
       // this.scrollPositionArray[this.scrollPositionArray.length - 1] < 1100
     ) {
-      console.log(this.plunger.position);
+      console.log(this.wpdiv.nativeElement.getBoundingClientRect());
       gsap.to(this.plunger.position, {
-        y: 0.5,
+        y: 0.4,
       });
       gsap.to(this.whole_thing.quaternion, {
-        _w: 0.60906331,
-        _x: 0.0979285,
-        _y: -0.7529978,
-        _z: -0.22901137,
+        _w: 0.55264755,
+        _x: -0.01353489,
+        _y: -0.83053107,
+        _z: -0.06793845,
       });
     }
   }
