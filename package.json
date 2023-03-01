@@ -25,6 +25,7 @@
     "angular-font-awesome": "^3.1.2",
     "font-awesome": "^4.7.0",
     "gsap": "^3.11.4",
+    "jasmine": "^4.5.0",
     "lato-font": "^3.0.0",
     "roboto-fontface": "^0.10.0",
     "rxjs": "~7.8.0",
